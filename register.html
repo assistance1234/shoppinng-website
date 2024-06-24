@@ -17,7 +17,7 @@
      <!-- script css -->
      <link rel="stylesheet" href="/css/custom.css">
 
-    <title>Amazon: Website</title>
+    <title>Amazon: Register</title>
   </head>
   <body>
     <!-- navbar starts -->
@@ -134,9 +134,13 @@
         <div class="card mx-auto mt-10 shadow rounded mt-5 pb-3" style="width:25rem;">
             
             <div class="card-body">
-              <h4 class="card-title font-weight-bold">Login</h4>
-              <!-- login form -->
+              <h4 class="card-title font-weight-bold">Register</h4>
+              <!-- register form  start-->
               <form novalidate>
+                <div class="mb-3">
+                  <label for="userEmail" class="form-label">Your name: </label>
+                  <input type="text" name="userName" class="form-control" id="userName" placeholder="abc" aria-describedby="emailHelp">
+                </div>
                 <div class="mb-3">
                   <label for="userEmail" class="form-label">Email: </label>
                   <input type="email" name="email" class="form-control" id="userEmail" placeholder="abc@abc.com" aria-describedby="emailHelp">
@@ -147,14 +151,21 @@
                   <input type="password" name="password" class="form-control" id="userPassword" placeholder="******" aria-describedby="passwordHelp">
                   <small id="passwordHelp" class="form-text text-muted"><i class="fa-solid text-primary fa-info"></i> Password must be at least  6 character</small>
                 </div>
+                <div class="mb-3">
+                  <label for="userPasswor" class="form-label">Password again: </label>
+                  <input type="password2" name="password2" class="form-control" id="userPassword2" placeholder="******" aria-describedby="passwordHelp2">
+                  <small id="passwordHelp2" class="form-text text-muted"><i class="fa-solid  text-primary fa-info"></i> Password must match the above</small>
+                </div>
                 
                 <button type="submit" class="btn btn-warning w-100 btn-sm shadow-rounded
-                ">Signin</button>
+                ">Register</button>
               </form>
                <!-- login form end -->
 
                <!-- or separators -->
-                <hr class="hr-text mt-3" data-content="New to Amazon?">
+                <hr class="hr-text mt-3" data-content="OR">
+                <!-- create account button -->
+                 <p class="text-center">Already have an Account<a href="login.html">Sign in <i class="fa-solid fa-caret-right"></i></a></p>
                 <a href="register.html" class="btn btn-sm btn-dark w-100 mt-2">Create your Amazon Account</a>
                 <a href="#" class="btn btn-outline-success btn-sm w-100 mt-3">
                     <i class="fa-brands fa-google"></i> Sign in with google
