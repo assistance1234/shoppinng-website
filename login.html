@@ -136,16 +136,28 @@
             <div class="card-body">
               <h4 class="card-title font-weight-bold">Login</h4>
               <!-- login form -->
-              <form novalidate>
+              <form class="row g-3 needs-validation" autocomplete="off"  method="post" action="#" novalidate>
                 <div class="mb-3">
                   <label for="userEmail" class="form-label">Email: </label>
-                  <input type="email" name="email" class="form-control" id="userEmail" placeholder="abc@abc.com" aria-describedby="emailHelp">
+                  <input type="email" name="email" class="form-control" id="userEmail" placeholder="abc@abc.com" aria-describedby="emailHelp" required>
                   <div id="emailHelp" class="form-text"><i class="fa-solid text-primary fa-info"></i> We'll never share your email with anyone else.</div>
+                  <div class="valid-feedback">
+                    <i class="fa-regular  text-success fa-thumbs-up"></i> Ok
+                  </div>
+                  <div class="invalid-feedback">
+                    <i class="fa-solid text-danger fa-circle-exclamation"></i> Some error in email.
+                  </div>
                 </div>
                 <div class="mb-3">
                   <label for="userPasswor" class="form-label">Password: </label>
-                  <input type="password" name="password" class="form-control" id="userPassword" placeholder="******" aria-describedby="passwordHelp">
+                  <input type="password" name="password" class="form-control" id="userPassword" placeholder="******" aria-describedby="passwordHelp" required minlength="6">
                   <small id="passwordHelp" class="form-text text-muted"><i class="fa-solid text-primary fa-info"></i> Password must be at least  6 character</small>
+                  <div class="valid-feedback">
+                    <i class="fa-regular text-success fa-thumbs-up"></i>  Ok
+                  </div>
+                  <div class="invalid-feedback">
+                    <i class="fa-solid text-danger fa-circle-exclamation"></i> Some error in password.
+                  </div>
                 </div>
                 
                 <button type="submit" class="btn btn-warning w-100 btn-sm shadow-rounded
@@ -181,5 +193,27 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     -->
     <script src="/js/custom.js"></script>
+    <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+</script>
   </body>
 </html>
