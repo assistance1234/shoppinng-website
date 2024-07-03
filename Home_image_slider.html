@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- fevicon -->
+    <link rel="icon" href="/img/images.png" image="image/gif" size="16x16" />
+
+    <!-- Bootstrap CSS 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"-->
+
+    <!-- cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- locally css -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <!-- script css -->
+    <link rel="stylesheet" href="/css/custom.css" />
+
+    <title>Amazon: Image Slider</title>
+  </head>
+  <body>
+    <!-- navbar starts -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <button class="btn btn-outline-light">
+        <i class="fa-solid fa-sliders"></i>
+      </button>
+      <div class="container-fluid">
+        <a class="navbar-brand p-lg-3" href="#">
+          <img
+            src="/img/amazonlogo.png"
+            height="30"
+            width="100"
+            alt="navbarlogo"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <form class="form-inline px-2" novalidate method="get">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="dropdown">
+                  <button
+                    class="btn btn-secondary dropdown-toggle"
+                    name="btnCategory"
+                    type="button"
+                    id="btnCategoryDropdownMenu"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    All
+                  </button>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="btnCategoryDropdownMenu"
+                  >
+                    <li><a class="dropdown-item" href="#">All</a></li>
+                    <li><a class="dropdown-item" href="#">Electronics</a></li>
+                    <li><a class="dropdown-item" href="#">Gifts</a></li>
+                    <li><a class="dropdown-item" href="#">Kitchen</a></li>
+                    <li><a class="dropdown-item" href="#">Phones</a></li>
+                    <li><a class="dropdown-item" href="#">Causmatic</a></li>
+                  </ul>
+                </div>
+              </div>
+              <input
+                type="text"
+                class="form-control"
+                size="70"
+                name="query"
+                id="query"
+              />
+              <input
+                type="text"
+                name="category"
+                id="category"
+                value="Giffts"
+                hidden
+              />
+              <div class="input-group-append">
+                <button type="submit" class="btn-warning">
+                  <i class="fa-solid fa-2x fa-magnifying-glass"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown px-2">
+              <a
+                class="nav-link"
+                href="#"
+                id="prefLanguageDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fa-solid text-white fa-2x fa-language"></i>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="prefLanguageDropdown">
+                <form class="p-2">
+                  <div class="form-check mb-2">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="prrefLang"
+                      value="en"
+                      id="englishLang"
+                    />
+                    <label class="form-check-label" for="englishLang">
+                      <img
+                        src="/img/am.jpg"
+                        height="30"
+                        width="50"
+                        alt="flag"
+                      />
+                    </label>
+                  </div>
+                  <div class="dropdown-divider"></div>
+                  <div class="form-check mb-2">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="prrefLang"
+                      value="hindi"
+                      id="hindiLang"
+                    />
+                    <label class="form-check-label" for="hindiLang">
+                      <img
+                        src="/img/hn.jpg"
+                        height="30"
+                        width="50"
+                        alt="flag"
+                      />
+                    </label>
+                  </div>
+                  <div class="dropdown-divider"></div>
+                  <div class="form-check mb-2">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="prrefLang"
+                      value="urdu"
+                      id="urduLang"
+                    />
+                    <label class="form-check-label" for="urduLang">
+                      <img
+                        src="/img/pk.svg"
+                        height="30"
+                        width="50"
+                        alt="flag"
+                      />
+                    </label>
+                  </div>
+                  <div class="dropdown-divider"></div>
+                  <div class="form-check mb-2">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="prrefLang"
+                      value="en"
+                      id="banglaLang"
+                    />
+                    <label class="form-check-label" for="banglaLang">
+                      <img
+                        src="/img/bg.jpg"
+                        height="30"
+                        width="50"
+                        alt="flag"
+                      />
+                    </label>
+                  </div>
+                  <div class="dropdown-divider"></div>
+                </form>
+              </ul>
+            </li>
+            <li class="nav-item dropdown px-2">
+              <a
+                class="nav-link"
+                href="login.html"
+                id="userAccount"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fa-solid fa-2x text-white fa-user"></i>
+              </a>
+              <ul class="dropdown-menu px-3" aria-labelledby="userAccount">
+                <div class="d-flex row justify-content-center">
+                  <a
+                    href="login.html"
+                    class="btn btn-warning w-75 btn-sm font-weight-bold"
+                    >Signin</a
+                  >
+                  <small class="text-muted"
+                    >New Customer?<a href="#">Start here.</a></small
+                  >
+                </div>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fa-solid fa-2x text-white fa-cart-shopping"></i>
+                <span class="badge badge-pill badge badge-warning">0</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar ended -->
+
+    <div class="container-fluid px-0">
+      <!-- immage slider start -->
+
+      <div
+        id="amazonImageSlider"
+        class="carousel slide carousel-fade"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <a href="https://google.com"><img
+              src="img/slider02.jpg"
+              class="d-block w-100"
+              height="350"
+              alt="slide img01"
+            /></a>
+          </div>
+          <div class="carousel-item">
+            <a href="https://google.com"><img
+              src="img/slider03.jpg"
+              class="d-block w-100"
+              height="350"
+              alt="..."
+            /></a>
+          </div>
+          <div class="carousel-item">
+            <a href="https://google.com"><img
+              src="img/slider04.jpg"
+              class="d-block w-100"
+              height="350"
+              alt="..."
+            /></a>
+          </div>
+          <div class="carousel-item">
+            <a href="https://google.com"><img
+              src="img/slider05.jpg"
+              class="d-block w-100"
+              height="350"
+              alt="..."
+            /></a>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="img/slider01.jpg"
+              class="d-block w-100"
+              height="350"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="img/slider06.jpg"
+              class="d-block w-100"
+              height="350"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="img/slider07.jpg"
+              class="d-block w-100"
+              height="350"
+              alt="..."
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#amazonImageSlider"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#amazonImageSlider"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <!-- image slider end -->
+
+      <div class="container mb-5">
+        <!-- product row start -->
+        <div class="row">
+          
+          <div class="col-lg-3">
+            <div class="card my-2 my-md-2 my-lg-0">
+              <div class="card-body d-flex justify-content-center">
+                <a href="#"><img src="img/bag.jpg" alt="product img" class="img-fluid" /></a>
+              </div>
+              <div class="card-footer bg-transparent py-0">
+                <div class="row my-2">
+                  <div class="col-md-6">
+                    <p class="text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>150.00</p>
+                  </div>
+
+                  <div class="col-md-6">
+                    <a href="#" class="btn btn-success float-end w-100 ">Buy</a>
+                  </div>
+                </div>
+              
+              </div>
+            </div>
+            </div>
+          <div class="col-lg-3">
+            <div class="card my-2 my-md-2 my-lg-0 ">
+              <div class="card-body d-flex justify-content-center">
+                <a href="#"><img src="img/bike.jpg" alt="product img" class="img-fluid" /></a>
+              </div>
+              <div class="card-footer bg-transparent py-0">
+                <div class="row my-2">
+                  <div class="col-md-6">
+                    <p class="text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>150.00</p>
+                  </div>
+
+                  <div class="col-md-6">
+                    <a href="#" class="btn btn-success float-end w-100 ">Buy</a>
+                  </div>
+                </div>
+              
+              </div>
+            </div>
+            </div>
+          <div class="col-lg-3">
+            <div class="card my-2 my-md-2 my-lg-0">
+              <div class="card-body d-flex justify-content-center">
+                <a href="#"><img src="img/fitness.jpg" alt="product img" class="img-fluid" /></a>
+              </div>
+              <div class="card-footer bg-transparent py-0">
+                <div class="row my-2">
+                  <div class="col-md-6">
+                    <p class="text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>150.00</p>
+                  </div>
+
+                  <div class="col-md-6">
+                    <a href="#" class="btn btn-success float-end w-100 ">Buy</a>
+                  </div>
+                </div>
+              
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="card my-2 my-md-2 my-lg-0">
+              <div class="card-body d-flex justify-content-center">
+                <a href="#"><img src="img/plant.jpg" alt="product img" class="img-fluid" /></a>
+              </div>
+              <div class="card-footer bg-transparent py-0">
+                <div class="row my-2">
+                  <div class="col-md-6">
+                    <p class="text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>150.00</p>
+                  </div>
+
+                  <div class="col-md-6">
+                    <a href="#" class="btn btn-success float-end w-100 ">Buy</a>
+                  </div>
+                </div>
+              
+              </div>
+            </div>
+          </div>
+          
+    </div>        <!-- product row end -->
+     <!-- product row start -->
+     <div class="row mt-md-4 mt-0">
+      <div class="col-lg-3">
+        <div class="card my-2 my-md-2 my-lg-0">
+          <div class="card-body d-flex justify-content-center">
+            <a href="#"><img src="img/bag.jpg" alt="product img" class="img-fluid" /></a>
+          </div>
+          <div class="card-footer bg-transparent py-0">
+            <div class="row my-2">
+              <div class="col-md-6">
+                <p class="text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>150.00</p>
+              </div>
+
+              <div class="col-md-6">
+                <a href="#" class="btn btn-success float-end w-100 ">Buy</a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="card my-2 my-md-2 my-lg-0">
+          <div class="card-body d-flex justify-content-center">
+            <a href="#"><img src="img/bike.jpg" alt="product img" class="img-fluid" /></a>
+          </div>
+          <div class="card-footer bg-transparent py-0">
+            <div class="row my-2">
+              <div class="col-md-6">
+                <p class="text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>150.00</p>
+              </div>
+
+              <div class="col-md-6">
+                <a href="#" class="btn btn-success float-end w-100 ">Buy</a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+        </div>
+      <div class="col-lg-3">
+        <div class="card my-2 my-md-2 my-lg-0">
+          <div class="card-body d-flex justify-content-center">
+            <a href="#"><img src="img/fitness.jpg" alt="product img" class="img-fluid" /></a>
+          </div>
+          <div class="card-footer bg-transparent py-0">
+            <div class="row my-2">
+              <div class="col-md-6">
+                <p class="text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>150.00</p>
+              </div>
+
+              <div class="col-md-6">
+                <a href="#" class="btn btn-success float-end w-100 ">Buy</a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="card my-2 my-md-2 my-lg-0">
+          <div class="card-body d-flex justify-content-center">
+            <a href="#"><img src="img/plant.jpg" alt="product img" class="img-fluid" /></a>
+          </div>
+          <div class="card-footer bg-transparent py-0">
+            <div class="row my-2">
+              <div class="col-md-6">
+                <p class="text-danger"><i class="fa-solid fa-indian-rupee-sign"></i>150.00</p>
+              </div>
+
+              <div class="col-md-6">
+                <a href="#" class="btn btn-success float-end w-100 ">Buy</a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      </div>
+      
+</div>        <!-- product row end -->
+    </div>
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+    <script src="/js/custom.js"></script>
+  </body>
+</html>
